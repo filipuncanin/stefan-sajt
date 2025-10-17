@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Električar Novi Sad | Elektro Majstor NS | 24/7 Hitne Intervencije</title>
+    <meta name="description" content="Profesionalne električarske usluge u Novom Sadu. Instalacije, popravke, održavanje. Električar dostupan 24/7. Pozovite: 060 5269 199">
+    <meta name="keywords" content="električar novi sad, električarske usluge, hitne intervencije, instalacije, popravke">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Elektro Majstor NS">
+    <meta name="theme-color" content="#ff6b35">
+    <link rel="canonical" href="https://elektromajstor-ns.github.io/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Električar Novi Sad | Elektro Majstor NS | 24/7 Hitne Intervencije">
+    <meta property="og:description" content="Profesionalne električarske usluge u Novom Sadu. Instalacije, popravke, održavanje. Električar dostupan 24/7. Pozovite: 060 5269 199">
+    <meta property="og:image" content="https://elektromajstor-ns.github.io/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elektromajstor-ns.github.io/">
+    <meta property="og:locale" content="sr_RS">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #ff6b35;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --border-light: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --border-radius: 0.5rem;
+            --container-max: 1200px;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 44px;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--white);
+            padding: 5rem 0;
+        }
+
+        .hero h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--bg-light);
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--white);
+            padding: 3rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-light);
+            padding: 3rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+
+        .contact-icon {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary-color);
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        .contact-card h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+        }
+
+        .contact-card .phone-link {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .contact-card .phone-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--white);
+            border-top: 1px solid var(--border-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .scroll-top:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .scroll-top:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        .scroll-top.show {
+            display: flex;
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2.5rem 0;
+            }
+
+            .hero .fade-in {
+                padding: 0 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 80%;
+                justify-content: center;
+            }
+
+            .services {
+                padding: 2rem 0;
+            }
+
+            .features {
+                padding: 2rem 0;
+            }
+
+            .contact {
+                padding: 2rem 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-card h4 {
+                font-size: 1.125rem;
+            }
+
+            .service-card p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 3rem;
+            height: 3rem;
+            border: 3px solid var(--border-light);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Elektro Majstor</h1>
+                        <p>Novi Sad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Profesionalne električarske usluge u Novom Sadu</h2>
+                <p>Brze i pouzdane električarske usluge za vaš dom i posao. Dostupni 24/7 za hitne intervencije.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+381605269199" class="btn">
+                        <i class="fas fa-phone"></i>
+                        +381 60 5269 199
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h3 class="section-title fade-in">Naše usluge</h3>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Instalacije</h4>
+                    <p>Kompletne električne instalacije za stanove, kuće i poslovne prostore.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Popravke</h4>
+                    <p>Brze i efikasne popravke svih vrsta električnih kvarova.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4>Održavanje</h4>
+                    <p>Redovno održavanje i pregled električnih sistema.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Hitne intervencije</h4>
+                    <p>Dostupni 24/7 za hitne električne intervencije.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Sigurnosni sistemi</h4>
+                    <p>Instalacija i održavanje sigurnosnih i alarmnih sistema.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Sertifikati</h4>
+                    <p>Izdavanje atesta i sertifikata za električne instalacije.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h3 class="section-title fade-in">Zašto izabrati nas?</h3>
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Brza reakcija</h4>
+                    <p>Dolazimo na teren u najkraćem mogućem roku, dostupni 24/7.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h4>Licencirani majstor</h4>
+                    <p>Svi radovi se izvode od strane licenciranog električara.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>Garancija</h4>
+                    <p>Pružamo garanciju na sve izvršene radove i materijal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h3 class="section-title fade-in">Kontaktirajte nas</h3>
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Telefon</h4>
+                    <p><a href="tel:+381605269199" class="phone-link">+381 60 5269 199</a></p>
+                    <p><small>Dostupni 24/7</small></p>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Lokacija</h4>
+                    <p>Novi Sad</p>
+                    <p><small>Cela teritorija</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span>Elektro Majstor</span>
+            </div>
+            <p>&copy; 2025 Elektro Majstor Novi Sad. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Idi na vrh stranice">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Elektro Majstor NS",
+        "description": "Profesionalne električarske usluge u Novom Sadu",
+        "telephone": "+381605269199",
+        "url": "https://elektromajstor-ns.github.io/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Novi Sad",
+            "addressRegion": "Vojvodina",
+            "addressCountry": "RS"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "serviceArea": {
+            "@type": "City",
+            "name": "Novi Sad"
+        },
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "1"
+        }
+    }
+    </script>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+            }, 500);
+        });
+
+        // Scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Scroll to top button
+        function toggleScrollTopButton() {
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        }
+
+        // Smooth scroll
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', function() {
+            animateOnScroll();
+            toggleScrollTopButton();
+        });
+
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                smoothScroll(target);
+            });
+        });
+
+        // Initial animation check
+        animateOnScroll();
+
+        // Handle tel links on desktop
+        function handleTelLinks() {
+            const telLinks = document.querySelectorAll('a[href^="tel:"]');
+            
+            telLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Check if it's a mobile device
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+                    
+                    if (!isMobile) {
+                        e.preventDefault();
+                        // Copy number to clipboard on desktop
+                        const phoneNumber = this.href.replace('tel:', '');
+                        navigator.clipboard.writeText(phoneNumber).then(() => {
+                            // Show temporary notification
+                            const notification = document.createElement('div');
+                            notification.textContent = 'Broj telefona je kopiran: ' + phoneNumber;
+                            notification.style.cssText = `
+                                position: fixed;
+                                top: 20px;
+                                right: 20px;
+                                background: var(--primary-color);
+                                color: white;
+                                padding: 1rem;
+                                border-radius: 0.5rem;
+                                z-index: 10000;
+                                font-size: 0.9rem;
+                            `;
+                            document.body.appendChild(notification);
+                            
+                            setTimeout(() => {
+                                notification.remove();
+                            }, 3000);
+                        }).catch(() => {
+                            // Fallback: show alert
+                            alert('Pozovite: ' + phoneNumber);
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Initialize tel link handling
+        handleTelLinks();
+    </script>
+</body>
+</html>
